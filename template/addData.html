@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %} Add Data {% endblock %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-5">
+		<h2>Add Data</h2>
+		<br>
+		<form method="POST">
+			<div class="form-group">
+				<label for="nim">Nim:</label>
+				<input type="text" class="form-control" name="nim" required="true" placeholder="Enter Nim">
+			</div>
+			<div class="form-group">
+				<label for="nama">Nama:</label>
+				<input type="text" class="form-control" name="nama" required="true" placeholder="Enter Nama">
+			</div>
+			<div class="form-group">
+				<label for="alamat">Alamat:</label>
+				<textarea name="alamat" class="form-control" placeholder="Enter Alamat"></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+</div>
+
+
+{% endblock %}

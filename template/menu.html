@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-md navbar-light bg-faded">
+  <a class="navbar-brand" href="#">NodeJS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      {% if user != 0 %}
+
+      <li class="nav-item">
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a href="/data" class="nav-link">My Data</a>
+      </li>
+      <li class="nav-item">
+        <a href="/profile" class="nav-link">Profile</a>
+      </li>
+
+      {% else %}
+
+      <li class="nav-item">
+        <a class="nav-link" id="home" href="/"><i class="fa fa-home"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="about" href="/about"><i class="fa fa-address-card"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact" href="/contact"><i class="fa fa-address-book"></i></a>
+      </li>  
+
+      {% endif %}
+      
+    <!-- <li class="nav-item">
+       <a class="nav-link" href="#">Portofolio</a>
+    </li> -->
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      {% if user != 0 %}
+
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        <i class="fa fa-user"></i> {{ user.name }}
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#"><i class="fa fa-address-card"></i> Profile</a>
+        <a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Setting</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/logout"><i class="fa fa-power-off"></i> Logout</a>
+      </div>
+    </li>
+
+      {% else %}
+        
+      <li class="nav-item">
+        <a href="/register" class="nav-link">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link">Sign In</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>  
+</nav>
+

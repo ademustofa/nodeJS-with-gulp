@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<!-- <h2>Hello World! Welcome to my website</h2> -->
+
+<a href="/tambah-data" class="btn btn-primary"><i class="fa fa-plus"></i> Add data</a>
+<br><br>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nim</th>
+			<th>Nama</th>
+			<th>Alamat</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for row in data %}
+		<tr>
+			<td>{{ row.nim }}</td>
+			<td>{{ row.nama }}</td>
+			<td>{{ row.alamat }}</td>
+			<td>
+				<a href="/update-data/{{ row.nim }}" class="btn btn-success"><i class="fa fa-edit"></i> Edit</a>
+				<a href="/delete/{{ row.nim }}" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+
+</table>
+
+
+{% endblock %}

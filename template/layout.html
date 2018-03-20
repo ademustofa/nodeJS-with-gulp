@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="/public/css/style.css">
+	<!-- <link rel="stylesheet" href="/public2/bootstrap/dist/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="/public/css/materia-bootstrap.min.css">
+	<link rel="stylesheet" href="/public2/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div class="container-fluid">
+		{% block menu %} {% include 'menu.html' %} {% endblock %}
+	</div>
+	<br>
+	<div class="container-fluid">
+		{% block content %} {% endblock %}
+	</div>
+
+<script src="/public2/jquery/dist/jquery.min.js"></script>
+<script src="/public/js/main.js"></script>
+<script src="/public2/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/public2/bootstrap/js/dist/popover.js"></script>
+</body>
+</html>
